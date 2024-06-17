@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@500&display=swap"
+    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Employer Account</title>
+    <link rel="stylesheet" href="SU_EMPLOYER.CSS">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="/CareerHub/Landing page/Landing page.html">
+        <div class="logo">
+            <img src="/CareerHub/images/CH.png" alt="careerhub">
+        </div>
+        </a>
+    </nav>
+
+
+    <div class="container">
+        <form class="signup-form">
+            <h1>Create Employer Account</h1>
+            <p>Sign up as an employer</p>
+            <div class="profile-picture">
+                <label for="profile-upload">
+                    <img src="profile-placeholder.png" alt="Upload" id="profile-pic">
+                    <input type="file" id="profile-upload" accept="image/*" onchange="loadFile(event)">
+                </label>
+            </div>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Password" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+            </div>
+            <a href="/CareerHub/Verify EMP/Verification EMP.html">
+            <button type="submit">SIGN UP</button>
+            </a>
+            <p><a href="/CareerHub/Employer/sign in employer.html">I'm already a member. Sign-in</a></p>
+        </form>
+    </div>
+    <script src="SU_EMPLOYER.JS"></script>
+</body>
+</html>

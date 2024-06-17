@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 350px; /* Increased width */
+    padding: 30px; /* Increased padding */
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.back-button {
+    text-align: left;
+}
+
+.back-button a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px; /* Increased font size */
+}
+
+.settings-title h1 {
+    margin: 20px 0;
+    font-size: 28px; /* Increased font size */
+    font-weight: bold;
+}
+
+.settings-options .option {
+    display: flex;
+    align-items: center;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 15px; /* Increased padding */
+    margin: 15px 0; /* Increased margin */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.icon-placeholder {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px; /* Increased margin */
+    border-radius: 5px;
+}
+
+.option span {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 18px; /* Increased font size */
+}

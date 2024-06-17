@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Job Seeker Account</title>
+    <link rel="stylesheet" href="SU_JS.CSS">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+    <script defer src="SU_JS.js"></script> 
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="/CareerHub/Landing page/Landing page.html">
+            <div class="logo">
+                <img src="/CareerHub/images/CH.png" alt="careerhub">
+            </div>
+        </a>
+    </nav>
+
+    <div id="progressDialog" style="display: none;">Loading...</div>
+
+    <div class="container">
+        <form class="signup-form"> 
+            <h1>Create Job Seeker Account</h1>
+            <p>Sign up as a job seeker</p>
+
+            <div class="profile-picture">
+                <label for="profile-upload">
+                    <img src="profile-placeholder.png" alt="Upload" id="profile-pic">
+                    <input type="file" id="profile-upload" accept="image/*" onchange="loadFile(event)">
+                </label>
+            </div>
+            
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Password" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+            </div>
+            <button type="submit">SIGN UP</button>
+            <p><a href="/CareerHub/Job seeker/jbs-signin.html">I'm already a member. Sign-in</a></p>
+        </form>
+    </div>
+</body>
+</html>

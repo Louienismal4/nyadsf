@@ -1,0 +1,390 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.parallax {
+    position: relative; /* Add this to establish a positioning context for overlay */
+    width: 100%;
+    height: 100vh;
+    background-image: url('/CareerHub/images/jobseeker 2.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    z-index: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: -1;
+  }
+  
+
+
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: rgb(31, 31, 31);
+    padding: 10px;
+    position: relative;
+   
+}
+
+.nav-list a::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: rgb(0, 110, 255);
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover::before {
+    width: 100%;
+}
+
+
+
+.logo{
+    margin-left: 20px;
+    margin-top: 13px;
+    margin-bottom: auto;
+}
+
+.ch{
+    margin-left: 5px;
+    margin-top: 15px; 
+}
+
+.logo img {
+    height: 50px;
+}
+
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-right: 15px;
+}
+
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-icon img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.profile-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.search-section {
+    text-align: center;
+    margin-top: -10%;
+    z-index: 1;
+}
+
+.search-section h1 {
+    font-size: 56px;
+    color: #ffffff;
+}
+
+.search-bar {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px 45px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.search-bar button {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.search-bar button img {
+    width: 16px;
+    z-index: 1;
+}
+.job-listing {
+    display: flex; /* arrange job items horizontally */
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.job:hover{
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
+    
+}
+.job {
+    display: flex;
+    position: relative;
+    align-items: center;  
+    background-color: #fff;
+    padding: 15px; /* Reduced padding for tighter fit */
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; 
+}
+
+.job-left { /* Container for the image */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.job-image {
+    width: 550px; 
+    height: 350px;
+    border-radius: 8px; /* Rounded corners for the image */
+    overflow: hidden;
+}
+
+.job-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.job-right { 
+    margin-left: 30px;
+    flex: 1; /* Takes up the remaining space */
+}
+
+.job-title {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #081257;
+}
+
+.job-description {
+    font-size: 0.9rem;
+    color: #757575; 
+    margin-bottom: 10px;
+    line-height: 1.4; 
+    max-height: 4.5em; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+}
+
+.job-details {
+    margin: 40px 0 0 0;
+    display: flex;         /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;  /* Align icons and text to the left */
+    gap: 8px;     
+    color: #757575;          /* Adjust the gap as needed for spacing between items */
+    font-size: 1.3rem;      
+    margin-bottom: 8px; 
+}
+.material-icons{
+    color: #081257;
+}
+
+/* Detail Item Styling */
+.job-details p {  
+    display: flex;         /* Use flexbox for icon alignment */
+    align-items: center; 
+      /* Vertically align icon and text */
+    margin: 0;             /* Remove default margins */
+}
+.job-details .separator {
+    margin: 0 5px;
+}
+
+.job-details .gp-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; 
+}
+
+.job-details .gp-container img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.job-details img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+h2#jobTitleTextView_job0 {
+    font-size: 1.2rem;  /* Make title stand out */
+    margin-bottom: 10px; 
+}
+
+p#companyNameTextView_job0,
+p#jobLocationTextView_job0,
+p#workTypeTextView_job0,
+p#workModeTextView_job0,
+p#salaryDetailsTextView_job0 {
+    display: flex; /* Use flex for alignment */
+    align-items: center;
+    font-size: 0.9rem;
+
+}
+
+.material-icons {
+    font-size: 18px;  /* Adjust icon size */
+    margin-right: 8px; /* Add space between icon and text */
+}
+
+.date-posted {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #888; 
+  
+   
+}
+
+/* Bookmark Icon */
+.bookmark-container {
+    align-self: flex-start;
+    margin-left: 20px; /* Add space between job-right and bookmark icon*/
+}
+
+.bookmark-icon {
+    font-size: 30px;      /* Adjust the size as needed */
+    cursor: pointer;
+    color: #081257;
+  }
+
+  .bookmark-icon.bookmarked { /* Style for the bookmarked state */
+    color: #f00;         /* Example: Change color to red when bookmarked */
+}
+
+/* Learn More Button */
+.button {
+    position: absolute;
+    bottom: 30px; /* Adjust bottom positioning */
+    right: 30px;  /* Position to the bottom right */
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    color: #081257; /* Navy blue color */
+    background-color: white;
+    border: 2px solid #081257; /* Navy blue color */
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    z-index: 2;  /* Ensure button is on top */
+  }
+  
+  
+  .button:hover {
+    background-color: #081257;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+.gp-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gp-container img {
+    width: 35px;
+    height: 35px;
+}
+
+.gp-container p {
+    margin: 0;
+    font-size: 14px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Change profile JS.CSS">
+    <title>Profile Page</title>
+    
+</head>
+<body>
+    <div class="container">
+        <a href="/CareerHub/Job seeker/js-dashboard.html" id="backButton" class="back-link">Back</a>
+        <div class="profile-header">Profile</div>
+        <div class="profile-image-container" onclick="document.getElementById('photo').click()">
+            <img class="profile-image" src="#" alt="">
+            <div class="upload-text">Upload Photo</div> <!-- Text container inside profile image container -->
+        </div>
+        <div class="profile-role">Job Seeker</div>
+        <form>
+            <div class="form-group">
+                <label for="name">Change Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="old-password">Old Password</label>
+                <input type="password" id="old-password" name="old-password">
+            </div>
+            <div class="form-group">
+                <label for="new-password">Change Password</label>
+                <input type="password" id="new-password" name="new-password">
+            </div>
+            <input type="file" id="photo" name="photo" accept="image/*" style="display: none;">
+            <button type="button" id="updateButton" class="update-button">UPDATE PROFILE</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            document.getElementById('photo').addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.querySelector('.profile-image').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            });
+
+            document.getElementById('updateButton').addEventListener('click', function() {
+                var name = document.getElementById('name').value;
+                var oldPassword = document.getElementById('old-password').value;
+                var newPassword = document.getElementById('new-password').value;
+                if (name && oldPassword && newPassword) {
+                    alert('Profile updated!');
+                } else {
+                    alert('Please fill out all fields.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

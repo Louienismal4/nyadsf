@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Apply</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            width: 400px;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container h1 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .upload-group {
+            text-align: center;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+        .upload-group input[type="file"] {
+            display: none;
+        }
+        .upload-group p {
+            margin: 0;
+        }
+        .upload-group img {
+            max-width: 100%;
+            max-height: 150px;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: none;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+        .buttons button {
+            width: 45%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .buttons .cancel {
+            background-color: #343a40;
+        }
+        .buttons .submit {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Easy Apply</h1>
+        <div class="section-title">Personal Info</div>
+        <div class="input-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="Enter your first name">
+        </div>
+        <div class="input-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Enter your last name">
+        </div>
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email address">
+        </div>
+        <div class="input-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" id="phoneNumber" placeholder="Enter your phone no." pattern="\d{1,15}" title="Phone number should be between 1 and 15 digits" maxlength="15">
+        </div>
+        <div class="section-title">Work Experience</div>
+        <div class="input-group">
+            <label for="experience">Years of Experience</label>
+            <input type="text" id="experience" placeholder="Enter your work experience">
+        </div>
+        <div class="upload-group" onclick="document.getElementById('fileUpload').click();">
+            <input type="file" id="fileUpload" accept="image/*">
+            <p id="uploadText">Click to upload image</p>
+            <div id="imagePreviewContainer" style="position: relative;">
+                <img id="uploadedImage" alt="" style="display: none;">
+                <button id="removeImageButton" style="display: none; position: absolute; top: 0; right: 0;">X</button>
+            </div>
+        </div>
+        <div class="buttons">
+                <button class="cancel" id="cancelButton" onclick="window.location.href='js-dashboard.html'">Cancel</button>
+                <button class="submit" onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+    <script src="Facebook_Easy_Apply.js"></script>
+</body>
+</body>
+</html>

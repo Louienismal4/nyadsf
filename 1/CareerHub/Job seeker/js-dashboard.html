@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Finder</title>
+    <link rel="stylesheet" href="js-dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script defer src="js-dashboard.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/CareerHub/images/CH.png" alt="careerhub">
+        </div>
+        <ul class="nav-list">
+            <div class="icons">
+                <a href="/CareerHub/Job seeker/js-dashboard.html"><img src="/CareerHub/images/Home.png"></a>
+                <a href="#"><img src="/CareerHub/images/Notification.png"></a>
+                <div class="profile-dropdown">
+                    <a href="CareerHub/Job seeker/Change Profile JS/Change profile JS.html" class="profile-icon">
+                        <img src="/CareerHub/images/Profile.png"></a>
+                    <div class="dropdown-content">
+                        <a href="/CareerHub/Job seeker/Change Profile JS/Change profile JS.html">Profile</a>
+                        <a href="#">Settings</a>            
+                        <a href="/CareerHub/Job seeker/jbs-signin.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <div class="parallax">
+        <div class="overlay"></div>
+        <div class="search-section">
+            <h1>Find Your Dream Job Right Away</h1>
+            <div class="search-bar">
+                <button type="submit"><img src="/CareerHub/images/Search.png"></button> 
+                <input type="text" class="input" placeholder="Search">
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="job-listing" id="jobListingsContainer"></div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #1a202c;
+}
+
+p {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.option-card {
+    transition: all 0.3s ease-in-out;
+    font-family: "Karla", sans-serif;
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    background-image: white;
+    box-shadow: 0 20px 30px -6px rgb(236, 236, 236);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    flex-direction: column;
+  }
+
+  .option-card:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+
+  .option-card:active {
+    opacity: 0.5;
+  }
+
+
+
+.option-card i {
+    font-size: 3rem;
+    color: #1a202c;
+    margin-bottom: 1rem;
+}
+
+.option-card p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.container a{
+    text-decoration: none;
+}

@@ -1,0 +1,507 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ANIMATION */
+
+@keyframes fade-down{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }  
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes slide{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px) scale(0.9);
+    }  
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    position: relative;
+    width: auto;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+}
+
+.logo{
+    margin-left: 20px;
+    margin-top: 13px;
+    margin-bottom: auto;
+}
+
+.ch{
+    margin-left: 5px;
+    margin-top: 15px; 
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: rgb(31, 31, 31);
+    padding: 10px;
+    position: relative;
+}
+
+.nav-list a::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: rgb(0, 110, 255);
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover::before {
+    width: 100%;
+}
+/* NAVBAR */
+
+.hero-section {
+    text-align: left;
+    padding: 80px 16px;
+    margin-left: 50px;
+}
+
+.hero-section h1 {
+    font-size: 60px;
+    font-weight: bold;
+    width: 40%;
+}
+
+.hero-section p {
+    margin-top: 16px;
+    font-size: 25px;
+    width: 40%;
+}
+
+.hero-section button {
+    margin-top: 24px;
+    padding: 12px 32px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.empowering-section {
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.image-section img {
+    max-width: fit-content(100%);
+    max-height: fit-content;
+}
+
+.empowering-section {
+    background-image: url('/CareerHub/images/empowering.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 80px 350px;
+}
+
+.empowering-section h2 {
+    font-size: 90px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.empowering-section p {
+    margin-top: 16px;
+    font-size: 28px;
+    color: white;
+}
+
+.careers-section {
+    padding: 80px 16px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.careers-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.careers-section p {
+    margin-top: 16px;
+    font-size: 18px;
+}
+
+.learn{
+    transition: all 0.3s ease-in-out;
+    font-family: "Karla", sans-serif;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    background: #1e3a8a;
+    box-shadow: 0 20px 30px -6px rgb(236, 236, 236);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px auto; /* Centered horizontally */
+    flex-direction: column;
+}
+
+.learn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.learn:active {
+    opacity: 0.5;
+}
+
+.learn i {
+    font-size: 3rem;
+    color: #1a202c;
+    margin-bottom: 1rem;
+}
+
+.learn p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.learn a {
+    text-decoration: none;
+}
+
+.info {
+    text-align: center;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
+    justify-content: center;
+    gap: 35px; /* Add gap between team members */
+    margin-top: 50px;
+}
+
+.team-member {
+    padding-right: 100px;
+    text-align: left; /* Optional: Align text in the center */
+    margin: 20px; /* Add some spacing around team members */
+    max-width: 100px; /* Limit the maximum width of team members */
+}
+
+.team-member img {
+    width: 100px; /* Adjust the image size as needed */
+    height: 100px;
+}
+
+.team-member h3 {
+    font-size: 18px; /* Reduce font size for team member names */
+    margin-top: 8px;
+    width: 200px;
+}
+
+.team-member p {
+    font-size: 14px; /* Reduce font size for team member roles */
+    color: #6b7280;
+    width: 150px;
+}
+
+.card-container-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Use align-items for centering in a column layout */
+    background: #191C69;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 15%;
+    margin-bottom: 30%;
+    gap: 100px;
+    padding-bottom: 100px;
+}
+
+.card-container-3 h1 {
+    font-size: 45px;
+    color: #e2e2e2;
+    margin-bottom: 15px;
+}
+
+.card-container-3 h2 {
+    font-size: 45px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.cards-holder {
+    display: flex;
+    flex-direction: row; /* Display children in a row */
+    flex-wrap: wrap; /* Allow wrapping to next line if necessary */
+    justify-content: center; /* Center cards horizontally */
+    gap: 25px; /* Adjust gap between cards */
+}
+
+.cards-2 {
+    width: 300px;
+    border-radius: 15px;
+    background: #ffee00;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards-2 img {          /*image is temporary do not remove!*/
+    width: 60px;
+    height: 60px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card-content-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    color: #252525;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    background-color: #191C69;
+    margin-top: 15%;
+    width: auto;
+}
+
+.ft-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #e2e2e2;
+}
+
+.ft-container h3{
+    margin-bottom: 80px;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.gf-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #e2e2e2;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.gmail-container{
+    display: flex;
+    flex-direction: row;
+    padding-right: 10%;
+    margin-left: 10%;
+    gap: 15px;
+}
+
+.phone-container{
+    display: flex;
+    flex-direction: row;
+    padding-right: 10%;
+    gap: 15px;
+}
+
+.line{
+    display: flex;
+    border-top: 1px solid #ffffff; /* Adjust the color and width as needed */
+    padding: 10px; /* Optional: Add some padding for spacing */
+    text-align: center; /* Optional: Center the footer text */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ft-navbar{
+    display: flex;
+    position: relative;
+    width: auto;
+}
+
+.ft-list{
+    list-style: none;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.ft-list a{
+    color: #e2e2e2;
+    padding: auto; /* Add padding to create space around the link text */
+    margin-right: 15px; /* Add margin to create space between links */
+    text-decoration: none;
+}
+
+.ft-navbar p{
+    color: #e2e2e2;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1200px) {
+    .hero-section h1, .hero-section p {
+        width: 60%;
+    }
+    .empowering-section {
+        padding: 80px 150px;
+    }
+    .empowering-section h2 {
+        font-size: 60px;
+    }
+    .empowering-section p {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section h1, .hero-section p {
+        width: 70%;
+        font-size: 50px;
+    }
+    .empowering-section {
+        padding: 80px 100px;
+    }
+    .empowering-section h2 {
+        font-size: 50px;
+    }
+    .empowering-section p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1, .hero-section p {
+        width: 100%;
+        font-size: 40px;
+    }
+    .empowering-section {
+        padding: 80px 50px;
+    }
+    .empowering-section h2 {
+        font-size: 40px;
+    }
+    .empowering-section p {
+        font-size: 18px;
+    }
+    .team-member {
+        max-width: 80px;
+    }
+    .team-member img {
+        width: 80px;
+        height: 80px;
+    }
+    .team-member h3 {
+        font-size: 16px;
+    }
+    .team-member p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero-section h1, .hero-section p {
+        font-size: 30px;
+    }
+    .empowering-section {
+        padding: 40px 20px;
+    }
+    .empowering-section h2 {
+        font-size: 30px;
+    }
+    .empowering-section p {
+        font-size: 16px;
+    }
+    .careers-section {
+        padding: 40px 16px;
+    }
+    .learn {
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .card-container-3 {
+        margin-top: 10%;
+        margin-bottom: 20%;
+        gap: 50px;
+        padding-bottom: 50px;
+    }
+    .card-container-3 h1, .card-container-3 h2 {
+        font-size: 35px;
+    }
+}

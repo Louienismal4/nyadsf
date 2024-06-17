@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Details</title>
+  <link rel="stylesheet" href="job_post_details.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+</head>
+<body>
+  <div class="container">
+    <button id="backbutton" onclick="history.back()" style="margin-bottom: 10px;">&larr; Back</button>
+      <div class="image-placeholder">
+        <img src="" alt="Job Image" id="jobPhotoImageView" class="job-image" />
+      </div>
+        <div class="image-placeholder">
+    </div>  
+    <h1 class="title" id="jobTitleTextView">Job Title</h1>  <span class="material-icons bookmark-icon" id="bookmarkIcon" >bookmark_border</span> 
+    <div class="info-section">
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span id="location"></span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-building"></i>
+        <span id="companyName"></span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-briefcase"></i>
+        <span id="workType"></span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-laptop-house"></i>
+        <span id="workMode"></span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-dollar-sign"></i>
+        <span id="salaryDetails"></span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-calendar-alt"></i>
+         <span id="datePosted"></span>
+      </div>
+    </div>
+    <div class="info-section">
+      <h2 class="section-title">Job Requirements :</h2>
+      <p class="paragraph" id="jobRequirements"></p>
+    </div>
+    <div class="info-section">
+      <h2 class="section-title">Job Description :</h2>
+      <p class="paragraph" id="jobDescription"></p>
+    </div>
+    <div class="info-section">
+      <h2 class="section-title">Contact Information :</h2>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <span id="emailWork"></span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-phone"></i>
+       <span id="phone"></span>
+      </div>
+    </div>
+    <div class="apply-button-container">
+      <button id="applyNowButton" class="apply-button" onclick="applyNow()">Apply Now</button>
+    </div>
+  </div>
+  <script>
+    function applyNow() {
+      // Assuming 'CareerHub/Job seeker/' is at the root of your domain
+      window.location.href = '/CareerHub/Job seeker/Facebook_Easy_Apply.html';
+    }
+  </script>
+  </div>
+  <script src="job_post_details.js"></script>
+</body>
+</html>
